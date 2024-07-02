@@ -1,0 +1,2 @@
+# Emotion-Diary
+ Emotion Diary é uma aplicação web que permite aos usuários documentar suas emoções e sentimentos diários. Os usuários podem registrar seus humores, visualizar um histórico de seus estados emocionais, analisar tendências através de gráficos visuais e receber recomendações de atividades adaptadas ao seu humor atual. Este projeto demonstra proficiência em desenvolvimento full-stack, com tecnologias como React, Node.js, Express.js e MySQL.
