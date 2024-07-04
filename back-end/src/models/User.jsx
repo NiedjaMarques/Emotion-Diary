@@ -1,0 +1,1 @@
+//Modelo de usuário para interação com o banco de dados.

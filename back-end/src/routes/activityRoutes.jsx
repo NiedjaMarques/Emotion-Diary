@@ -1,0 +1,1 @@
+//Rotas para sugestões de atividades.

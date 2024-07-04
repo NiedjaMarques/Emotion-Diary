@@ -1,3 +1,4 @@
+//Arquivo principal onde são definidas as rotas e layout geral da aplicação.
 import { useState } from 'react'
 import './App.css'
 

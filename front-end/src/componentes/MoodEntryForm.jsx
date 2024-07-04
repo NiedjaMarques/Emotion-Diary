@@ -1,0 +1,1 @@
+// Componente para o formulário de registro de humor.

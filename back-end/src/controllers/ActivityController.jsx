@@ -1,0 +1,1 @@
+//Controlador para sugestões de atividades.

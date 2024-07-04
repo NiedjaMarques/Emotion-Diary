@@ -1,0 +1,1 @@
+//Rotas para CRUD de registros de humor.

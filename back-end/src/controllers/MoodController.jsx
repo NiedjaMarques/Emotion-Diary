@@ -1,0 +1,1 @@
+//Controlador para operações CRUD dos registros de humor.

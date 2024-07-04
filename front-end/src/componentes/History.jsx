@@ -1,0 +1,1 @@
+//Componente para visualização de histórico de registros.

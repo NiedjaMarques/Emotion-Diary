@@ -1,3 +1,4 @@
+//Ponto de entrada do servidor Express.
 const express = require('express'); //importa o express para o node.js, 
 const app = express(); //instancia do express, dá pra configurar rotas, middlewares, etc
 const port = process.env.PORT || 3001; //Define a porta onde o servidor irá escutar as conexões.

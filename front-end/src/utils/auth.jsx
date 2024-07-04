@@ -1,0 +1,1 @@
+//Funções para autenticação e gerenciamento de JWT.
