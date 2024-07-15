@@ -10,7 +10,7 @@ const RegisterForm = () => {
                         Cadastre-se
                     </h1>
 
-                    <form action="" method="post" className='grid gap-3 p-5'>
+                    <form id="registerForm" className='grid gap-3 p-5'>
                         
                         <input className='rounded-md p-2 border outline-none' type="text" name="cadNome" id="cadNome" placeholder='Nome' />
                         <input className='rounded-md p-2 border outline-none' type="email" name="cadEmail" id="cadEmail" placeholder='Email' />
