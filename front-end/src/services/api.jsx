@@ -14,16 +14,16 @@ async function cadastrarUsuario(nome, email, senha) {
 }
 
 // Função para fazer login
-async function fazerLogin(email, senha) {
-    const response = await fetch('/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email, senha })
-    });
-    return response.json();
-}
+// async function fazerLogin(email, senha) {
+//     const response = await fetch('/login', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({ email, senha })
+//     });
+//     return response.json();
+// }
 
 // Evento de submit para formulário de cadastro
 document.getElementById('registerForm').addEventListener('submit', async (event) => {

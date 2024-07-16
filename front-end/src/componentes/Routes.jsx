@@ -1,3 +1,4 @@
+
 //componente que lida com as Routes, gerenciamento de paginas do front
 import {createBrowserRouter, RouterProvider } from 'react-router-dom'
 import React from 'react';
@@ -7,6 +8,7 @@ import LoginForm from "./LoginForm";
 import Dashboard from './Dashboard';
 import Profile from './Profile';
 import MoodEntryForm from './MoodEntryForm';
+import ErrorPage from './ErrorPage.jsx';
 
 
 const router = createBrowserRouter([
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
         path: "/history",
         element: <History />,
     },
+    {
+        path: "*", 
+        element: <ErrorPage/>
+    }
 ])
 
 export default router;

@@ -1,9 +1,9 @@
 //Componente para a página de perfil do usuário.
-const Profile = () =>{
+const Profile = ({nome}) =>{
     return(
         <>
             <h1>
-                Aqui é a Profile
+                Aqui cadastrou com sucesso sbb {nome}
             </h1>
         </>
     )
