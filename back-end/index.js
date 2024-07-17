@@ -1,4 +1,4 @@
-//Ponto de entrada do servidor Express.
+//Ponto de entrada do servidor Express. (API)
 const express = require('express') //importa o express para o node.js, 
 const cors = require('cors')
 const connection = require('./src/config/database')
@@ -22,20 +22,23 @@ app.get('/', (req, res) => { //define uma rota http get
   res.send('Backend ta funcionando!!');
 });
 
-// Endpoint para cadastrar um usuário
+// Endpoint para cadastrar um usuário usando express
 app.post('/cadastro', (req, res) => {
-  const { nome, email, senha } = req.body;
+
+  const { nome, email, senha } = req.body; //extrai os dados do corpo da solicitação usando req.body
   const query = 'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)';
+
   connection.query(query, [nome, email, senha], (err, results) => {
+
     if (err) {
-      console.error('Erro ao cadastrar usuário: back', err);
-      res.status(500).send('Erro ao cadastrar usuário');
+      console.error('Erro ao cadastrar usuário: back', err); //se der errado, ele avisa ao front que envia o usuario para uma pag de erro
+      res.status(500).send('Erro ao cadastrar usuário'); //
       return;
     }
     console.log('Usuário cadastrado com sucesso:', results.insertId);
     res.status(201).send('Usuário cadastrado com sucesso');
+
   });
-  //res.send('Endpoint de cadastro de usuário');
 });
 
 // Rota de login

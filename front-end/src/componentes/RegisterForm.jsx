@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 const RegisterForm = () => {
+    const navigate = useNavigate()
 
     const [formDataRegister, setFormDataRegister] = useState({
         nome: '',
@@ -10,25 +11,29 @@ const RegisterForm = () => {
         senha: ''
     })
 
-    const navigate = useNavigate()
-
-    const cadastrarUsuario = async (nome, email, senha) => { //função assincrona que recebe os dados (email, nome e senha)
+    //função q envia os dados para api 
+    const cadastrarUsuario = async (nome, email, senha) => {
+        //fetch envia dados para api
         try {
-            const response = await fetch('http://localhost:3001/cadastro', { //envia uma requisição post para a url especificada com o nome, senha e email no corpo da requisição
+            const response = await fetch('http://localhost:3001/cadastro', { 
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify ({nome, email, senha}),
+                body: JSON.stringify ({ //dados que pego no req.body no back
+                    nome, email, senha
+                }),
             })
-            if (!response.ok) { //se a resposta do servidor não for ok, manda pra pagina de error
-                navigate('*');
+
+            if (!response.ok) { //se a resposta do servidor não for ok, manda pra o catch
+                throw new Error('deu erro na resposta'); 
             }
-            const data = await response.json(); //se a resposta for ok, converte ela em objeto javascript
+            const data = await response.json(); //se a resposta for ok, converte ela em JSON
             return data //retorna os dados recebidos pelo servidor
+
         } catch (error) {
-            navigate('*');
-            //return { error: error.message } //retorna a mensagem de erro, personalizar e enviar com o erro especifico
+            return { error: error.message } //retorna a mensagem de erro, personalizar e enviar para pag de erro
+            //navigate('*'); // Redireciona para a página de erro
         }
     }
 
@@ -44,14 +49,14 @@ const RegisterForm = () => {
         e.preventDefault()
 
         try {
-            const result = cadastrarUsuario(formDataRegister.nome, formDataRegister.email, formDataRegister.senha) //chama a função cadastrarUsuario com os dados (email, senha, nome)
-            if (result.error) { //se der errado, mostra o erro
+            const result = cadastrarUsuario(formDataRegister.nome, formDataRegister.email, formDataRegister.senha) //chama a função cadastrarUsuario com os dados (email, senha, nome) com a resposta que veio da api
+            if (result.error) { //se der errado, mostra o erro //redirecionar para uma página de erro, etc. VISUAL
                 navigate('*');
             }else{
-                navigate('/profile'); //se der certo, cadastrou com sucesso no banco de dados 
+                navigate('/profile'); //se der certo, cadastrou com sucesso no banco de dados VISUAL
             }
         } catch (error) {
-            navigate('*'); //mostra o erro pq deu errado
+            navigate('*'); //mostra o erro pq deu errado VISUAL
         }
     }
 
