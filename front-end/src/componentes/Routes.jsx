@@ -9,6 +9,7 @@ import Dashboard from './Dashboard';
 import Profile from './Profile';
 import MoodEntryForm from './MoodEntryForm';
 import ErrorPage from './ErrorPage.jsx';
+import DiarioDesejos from './DiarioDesejos.jsx';
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     {
         path: "/dashboard",
         element: <Dashboard />,
+    },
+    {
+        path: "/diariodedesejos",
+        element: <DiarioDesejos />,
     },
     {
         path: "/profile",

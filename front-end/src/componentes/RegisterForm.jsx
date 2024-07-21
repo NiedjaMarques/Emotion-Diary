@@ -64,7 +64,7 @@ const RegisterForm = () => {
         <>
             <div className="h-screen flex items-center justify-center bg-slate-900" >       
                 <div className='p-5 rounded-lg border-2 shadow-lg bg-white '>
-                    <h1 className='text-center text-2xl mb-5 font-semibold text-azulClaro'>
+                    <h1 className='text-center text-3xl mb-5 font-semibold text-azulClaro'>
                         Cadastre-se
                     </h1>
 
@@ -98,7 +98,7 @@ const RegisterForm = () => {
 
                     </form>
 
-                    <p className='text-sm text-center'>
+                    <p className='text-center'>
                         <Link className='hover:underline text-azulClaro' to="/">Fazer login.</Link>
                     </p>
                 </div>

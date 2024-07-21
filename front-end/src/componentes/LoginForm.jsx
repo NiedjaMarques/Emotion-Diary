@@ -70,7 +70,7 @@ const LoginForm = () => {
         
         <div className="p-5 rounded-lg border-2 shadow-lg bg-white">
 
-          <h1 className="text-center text-2xl mb-5 font-semibold text-azulClaro">
+          <h1 className="text-center text-3xl mb-5 font-semibold text-azulClaro">
             Login
           </h1>
 
@@ -94,14 +94,14 @@ const LoginForm = () => {
               onChange={handleInputChange}
             />
             <input
-              className="bg-azulClaro hover:scale-[1.1] transition-all duration-500 ease-in-out text-white font-semibold p-2 rounded-md w-1/2 mx-auto cursor-pointer"
+              className="bg-azulClaro hover:scale-[1.1] transition-all duration-500 ease-in-out text-white font-semibold p-2 rounded-md w-1/2 mx-auto cursor-pointer "
               type="submit"
               value="Logar"
             />
           </form>
 
-          <p className="text-sm text-center my-2">
-            Não tem conta ? <Link className="hover:underline text-azulClaro" to="/cadastrar">Cadastre-se </Link>
+          <p className=" text-center my-2">
+            Não tem conta ? <Link className="hover:underline text-azulClaro " to="/cadastrar">Cadastre-se </Link>
           </p>
         </div>
 
