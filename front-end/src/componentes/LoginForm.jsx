@@ -100,7 +100,7 @@ const LoginForm = () => {
             />
           </form>
 
-          <p className=" text-center my-2">
+          <p className=" text-center my-2 text-black">
             Não tem conta ? <Link className="hover:underline text-azulClaro " to="/cadastrar">Cadastre-se </Link>
           </p>
         </div>

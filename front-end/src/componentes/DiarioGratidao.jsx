@@ -2,7 +2,7 @@ import MainLayout from './MainLayout'
 import { FaPlus, FaAngleLeft } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
-const DiarioDesejos = () => {
+const DiarioGratidao = () => {
     return(
         <>
             <MainLayout>
@@ -13,7 +13,7 @@ const DiarioDesejos = () => {
                             <FaAngleLeft className='text-2xl mr-3 font-extrabold' />
                         </Link>
                         <h1 className='text-2xl font-semibold py-4'>                                    
-                            Diário de Desejos
+                            Diário da Gratidão
                         </h1>
                     </div>
                     
@@ -40,4 +40,4 @@ const DiarioDesejos = () => {
         </>
     )
 }
-export default DiarioDesejos
+export default DiarioGratidao

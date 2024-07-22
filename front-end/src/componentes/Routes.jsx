@@ -6,10 +6,15 @@ import React from 'react';
 import RegisterForm from "./RegisterForm";
 import LoginForm from "./LoginForm";
 import Dashboard from './Dashboard';
+import DiarioDesejos from './DiarioDesejos.jsx';
+import DiarioEmocoes from './DiarioEmocoes.jsx';
+import DiarioMedo from './DiarioMedo.jsx';
+import DiarioGratidao from './DiarioGratidao.jsx';
+
 import Profile from './Profile';
 import MoodEntryForm from './MoodEntryForm';
 import ErrorPage from './ErrorPage.jsx';
-import DiarioDesejos from './DiarioDesejos.jsx';
+
 
 
 const router = createBrowserRouter([
@@ -28,6 +33,18 @@ const router = createBrowserRouter([
     {
         path: "/diariodedesejos",
         element: <DiarioDesejos />,
+    },
+    {
+        path: "/diariodeemocoes",
+        element: <DiarioEmocoes />,
+    },
+    {
+        path: "/diariodemedos",
+        element: <DiarioMedo />,
+    },
+    {
+        path: "/diariodegratidao",
+        element: <DiarioGratidao />,
     },
     {
         path: "/profile",
