@@ -7,7 +7,7 @@ body{
   color: white;
   background-image: url(../public/view/bg5.png);
   background-repeat: repeat;
-  animation: moveBackground 10s linear infinite alternate;
+  animation: moveBackground 40s linear infinite alternate;
 }
 
 @keyframes moveBackground {
